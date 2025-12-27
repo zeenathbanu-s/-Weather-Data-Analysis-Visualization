@@ -1,0 +1,23 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    margin: 0; padding: 0;
+    height: 100vh; display: flex; justify-content: center; align-items: flex-start; padding-top: 40px;
+}
+.container {
+    background: #fff; border-radius: 20px; padding: 25px; width: 500px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+}
+h1 { text-align: center; color:#004aad; }
+.mode-selector { display:flex; justify-content:center; gap:10px; margin-bottom:15px; }
+.mode-btn { border:none; background:#eee; color:#444; font-weight:bold; border-radius:8px; padding:10px 20px; cursor:pointer; transition:0.3s; }
+.mode-btn.active { background:#004aad; color:white; transform:scale(1.05); }
+form { display:flex; flex-direction:column; gap:10px; }
+input, button { padding:10px; border-radius:8px; border:1px solid #ccc; }
+button { background:#004aad; color:white; font-weight:bold; cursor:pointer; transition:0.3s; }
+button:hover { background:#006aff; }
+.data-buttons { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin:15px 0; }
+.data-btn { background:#e0f7ff; border:none; border-radius:10px; padding:12px; font-size:15px; font-weight:600; color:#004aad; cursor:pointer; transition:0.3s; }
+.data-btn:hover { background:#b3e5fc; transform:scale(1.05); }
+#extra-info { text-align:center; }
+.error { color:red; font-weight:bold; }

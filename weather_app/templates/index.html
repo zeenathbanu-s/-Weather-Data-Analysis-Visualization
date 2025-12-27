@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Weather Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>🌤️ Smart Weather Dashboard</h1>
+
+    <div class="mode-selector">
+        <button class="mode-btn active" data-mode="current">Current</button>
+        <button class="mode-btn" data-mode="history">History</button>
+        <button class="mode-btn" data-mode="future">Future</button>
+    </div>
+
+    <form id="weatherForm">
+        <input type="text" name="location" placeholder="Enter city or district" required>
+        <input type="date" name="date" id="dateInput" style="display:none;">
+        <button type="submit">Get Weather</button>
+        <button type="button" id="locBtn">📍 Use My Location</button>
+    </form>
+
+    <div id="result" class="result-box">
+        <div class="data-buttons">
+            <button class="data-btn" id="temp">🌡️ Temp</button>
+            <button class="data-btn" id="feels">🤔 Feels Like</button>
+            <button class="data-btn" id="humidity">💧 Humidity</button>
+            <button class="data-btn" id="wind">💨 Wind</button>
+            <button class="data-btn" id="condition">☁️ Condition</button>
+        </div>
+        <div id="extra-info"></div>
+    </div>
+
+    <canvas id="weatherChart" width="400" height="200"></canvas>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
